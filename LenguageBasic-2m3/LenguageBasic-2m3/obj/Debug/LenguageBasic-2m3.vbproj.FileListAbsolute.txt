@@ -1,0 +1,12 @@
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\bin\Debug\LenguageBasic-2m3.exe.config
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\bin\Debug\LenguageBasic-2m3.exe
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\bin\Debug\LenguageBasic-2m3.pdb
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\bin\Debug\LenguageBasic-2m3.xml
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\obj\Debug\LenguageBasic-2m3.vbprojAssemblyReference.cache
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\obj\Debug\LenguageBasic_2m3.Form1.resources
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\obj\Debug\LenguageBasic_2m3.Resources.resources
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\obj\Debug\LenguageBasic-2m3.vbproj.GenerateResource.cache
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\obj\Debug\LenguageBasic-2m3.vbproj.CoreCompileInputs.cache
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\obj\Debug\LenguageBasic-2m3.exe
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\obj\Debug\LenguageBasic-2m3.xml
+C:\Users\Sistemas-11\source\repos\LenguageBasic-2m3\LenguageBasic-2m3\obj\Debug\LenguageBasic-2m3.pdb
