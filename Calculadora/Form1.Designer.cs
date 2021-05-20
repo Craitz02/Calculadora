@@ -30,10 +30,6 @@ namespace Calculadora
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblResult = new System.Windows.Forms.Label();
-            this.lblOperation = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnPercent = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
@@ -58,6 +54,10 @@ namespace Calculadora
             this.btn0 = new System.Windows.Forms.Button();
             this.btnPoint = new System.Windows.Forms.Button();
             this.btnEqual = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.lblOperation = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -97,50 +97,6 @@ namespace Calculadora
             this.flowLayoutPanel1.Size = new System.Drawing.Size(326, 403);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.Controls.Add(this.lblResult);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(16, 67);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 65);
-            this.flowLayoutPanel3.TabIndex = 2;
-            // 
-            // lblResult
-            // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(290, 20);
-            this.lblResult.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(27, 29);
-            this.lblResult.TabIndex = 0;
-            this.lblResult.Text = "0";
-            // 
-            // lblOperation
-            // 
-            this.lblOperation.AutoSize = true;
-            this.lblOperation.Location = new System.Drawing.Point(317, 20);
-            this.lblOperation.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
-            this.lblOperation.Name = "lblOperation";
-            this.lblOperation.Size = new System.Drawing.Size(0, 13);
-            this.lblOperation.TabIndex = 3;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.lblOperation);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 13);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(320, 48);
-            this.flowLayoutPanel2.TabIndex = 4;
-            // 
             // btnPercent
             // 
             this.btnPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,6 +116,7 @@ namespace Calculadora
             this.btnCE.TabIndex = 1;
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // btnC
             // 
@@ -170,6 +127,7 @@ namespace Calculadora
             this.btnC.TabIndex = 2;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnDEL
             // 
@@ -180,6 +138,7 @@ namespace Calculadora
             this.btnDEL.TabIndex = 3;
             this.btnDEL.Text = "DEL";
             this.btnDEL.UseVisualStyleBackColor = true;
+            this.btnDEL.Click += new System.EventHandler(this.btnDEL_Click);
             // 
             // btnFraction
             // 
@@ -190,6 +149,7 @@ namespace Calculadora
             this.btnFraction.TabIndex = 4;
             this.btnFraction.Text = "1/x";
             this.btnFraction.UseVisualStyleBackColor = true;
+            this.btnFraction.Click += new System.EventHandler(this.btnFraction_Click);
             // 
             // btnSquare
             // 
@@ -200,6 +160,7 @@ namespace Calculadora
             this.btnSquare.TabIndex = 5;
             this.btnSquare.Text = "x^2";
             this.btnSquare.UseVisualStyleBackColor = true;
+            this.btnSquare.Click += new System.EventHandler(this.btnSquare_Click);
             // 
             // btnSquareRoot
             // 
@@ -210,6 +171,7 @@ namespace Calculadora
             this.btnSquareRoot.TabIndex = 6;
             this.btnSquareRoot.Text = "√x";
             this.btnSquareRoot.UseVisualStyleBackColor = true;
+            this.btnSquareRoot.Click += new System.EventHandler(this.btnSquareRoot_Click);
             // 
             // btnDivision
             // 
@@ -363,6 +325,7 @@ namespace Calculadora
             this.btnMasMenos.TabIndex = 20;
             this.btnMasMenos.Text = "±";
             this.btnMasMenos.UseVisualStyleBackColor = true;
+            this.btnMasMenos.Click += new System.EventHandler(this.btnMasMenos_Click);
             // 
             // btn0
             // 
@@ -395,6 +358,51 @@ namespace Calculadora
             this.btnEqual.TabIndex = 23;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = true;
+            this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel3.Controls.Add(this.lblResult);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(16, 67);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(320, 65);
+            this.flowLayoutPanel3.TabIndex = 2;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Location = new System.Drawing.Point(290, 20);
+            this.lblResult.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(27, 29);
+            this.lblResult.TabIndex = 0;
+            this.lblResult.Text = "0";
+            // 
+            // lblOperation
+            // 
+            this.lblOperation.AutoSize = true;
+            this.lblOperation.Location = new System.Drawing.Point(317, 20);
+            this.lblOperation.Margin = new System.Windows.Forms.Padding(3, 20, 3, 0);
+            this.lblOperation.Name = "lblOperation";
+            this.lblOperation.Size = new System.Drawing.Size(0, 13);
+            this.lblOperation.TabIndex = 3;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.Controls.Add(this.lblOperation);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 13);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(320, 48);
+            this.flowLayoutPanel2.TabIndex = 4;
             // 
             // Form1
             // 
