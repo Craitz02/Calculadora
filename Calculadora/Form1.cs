@@ -14,6 +14,7 @@ namespace Calculadora
 
     {
         private bool isOperationAdded=false;
+        private bool isEqualsPressed = false;
         private string operation;
         private double result = 0;
         private double first = 0;
@@ -23,11 +24,9 @@ namespace Calculadora
             InitializeComponent();
         }
 
-
-
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (lblResult.Text.Equals("0") || isOperationAdded)
+            if (lblResult.Text.Equals("0"))
             {
                 lblResult.Text = "";
             }
@@ -39,63 +38,71 @@ namespace Calculadora
                     return;
                 }
             }
-            lblResult.Text += btn.Text;
+
+            if (!isOperationAdded)
+            {
+                lblResult.Text += btn.Text;
+                first = Double.Parse(lblResult.Text);
+                //second = Double.Parse(lblResult.Text);
+            }
+            else if (isOperationAdded)
+            {
+                lblResult.Text = lblResult.Text + btn.Text;
+                second = Double.Parse(lblResult.Text);
+            }
         }
 
         private void btnMas_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            if (first == 0 || isOperationAdded)
-            {
-                first = Double.Parse(lblResult.Text);
-                
-
-            }
-            else
-            {
-                PerformOperation();
-            }
             operation = btn.Text;
             isOperationAdded = true;
-            lblOperation.Text = lblResult.Text + " " + operation;
+            PerformOperation();
+            lblResult.Text = "";
 
         }
 
         private void PerformOperation()
         {
-            //lblOperation.Text = lblOperation.Text + " " + lblResult.Text;
-            switch (operation)
+            if (!isEqualsPressed)
             {
-
-                case "+":
-                    result = first + second;
-                    break;
-                case "-":
-                    result = first - second;
-                    break;
-                case "÷":
-                    double temp = second;
-                    if (first == 0 && temp == 0)
-                    {
-                        lblResult.Text = "Undefined";
-                    }
-                    else if (temp == 0)
-                    {
-                        lblResult.Text = "Error";
-                    }
-                    else
-                    {
-                        first /= temp;
-                    }
-                    break;
-                case "x":
-                    result = first * second;
-                    break;
-                default: break;
+                lblOperation.Text = lblResult.Text + " " + operation;
             }
+            if (isEqualsPressed)
+            {
+                switch (operation)
+                {
 
-            lblResult.Text = result.ToString();
-            lblOperation.Text = "";
+                    case "+":
+                        result = first + second;
+                        break;
+                    case "-":
+                        result = first - second;
+                        break;
+                    case "÷":
+                        if (first == 0 && second == 0)
+                        {
+                            lblResult.Text = "Undefined";
+                        }
+                        else if (second == 0)
+                        {
+                            lblResult.Text = "Error";
+                        }
+                        else
+                        {
+                            result = first / second;
+                        }
+                        break;
+                    case "x":
+                        result = first * second;
+                        break;
+                    default: break;
+                }
+                lblResult.Text = result.ToString();
+                lblOperation.Text = first.ToString() + " " + operation + " " + second.ToString() + " =";
+                first = result;
+                isEqualsPressed = false;
+            }
 
         }
 
@@ -126,33 +133,33 @@ namespace Calculadora
         private void btnDEL_Click(object sender, EventArgs e)
         {
             string Result = lblResult.Text;
-            if(Result.Length > 0)
+            if(Result.Length > 1)
             {
                 Result = Result.Remove(Result.Length - 1);
-                lblResult.Text = Result;
             }
+            else if(Result.Length == 1){
+                Result = "0";
+            }
+            lblResult.Text = Result;
 
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            if (first != 0 && isOperationAdded)
-            {
-
-                second = Double.Parse(lblResult.Text);
-
-            }
+            isEqualsPressed = true;
             PerformOperation();
         }
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-            lblResult.Text = "";
+            lblResult.Text = "0";
         }
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            lblResult.Text = "";
+            lblResult.Text = "0";
+            isOperationAdded = false;
+            isEqualsPressed = false;
             lblOperation.Text = "";
             operation = "";
             first = 0;
@@ -161,8 +168,13 @@ namespace Calculadora
         private void btnMasMenos_Click(object sender, EventArgs e)
         {
             double No = Double.Parse(lblResult.Text);
-            No *= -1;
+            No *= (-1);
             lblResult.Text = No.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,3 +8,13 @@ C:\Users\Sistemas-11\Documents\c#\Calculadora\Calculadora\obj\Debug\Calculadora.
 C:\Users\Sistemas-11\Documents\c#\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
 C:\Users\Sistemas-11\Documents\c#\Calculadora\Calculadora\obj\Debug\Calculadora.exe
 C:\Users\Sistemas-11\Documents\c#\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\obj\Debug\Calculadora.csprojAssemblyReference.cache
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\obj\Debug\Calculadora.Form1.resources
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\obj\Debug\Calculadora.Properties.Resources.resources
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.GenerateResource.cache
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\rodri\Source\Repos\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
